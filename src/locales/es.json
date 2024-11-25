@@ -1,0 +1,137 @@
+{
+    "common": {
+        "close": "Cerrar",
+        "buttons": {
+            "simpleview": "Vista simple",
+            "comparaisonview": "Vista comparativa",
+            "tutorial": "Tutorial",
+            "previous_step": "Paso anterior",
+            "next_step": "Siguiente paso",
+            "reset": "Borrar datos",
+            "pause": "Pausar",
+            "play": "Iniciar",
+            "stop": "Reiniciar simulación",
+            "load_file": "Cargar simulación",
+            "save_file": "Guardar simulación",
+            "add": "Añadir",
+            "save": "Guardar",
+            "save_simulation": "Guardar simulación"
+        },
+        "example_number": "Ejemplo {{number}}",
+        "examples": "Ejemplos",
+        "simulation_algorithm": "Algoritmo simulación",
+        "simulator_settings": "Configuración del simulador",
+        "simulator_results": "Resultados",
+        "tutorial": {
+            "control_bar_overview": "Esto es la barra de control del simulador que te permite controlar la simulación.",
+            "control_bar_reset": "Este botón reinicia el simulador: elimina todas las peticiones.",
+            "control_bar_stop": "Este botón reinicia la simulación, sin eliminar las peticiones.",
+            "control_bar_previous_step": "Este botón permite volver al estado anterior de la simulación",
+            "control_bar_next_step": "Este botón avanza en un paso la simulación, permite ver la simulación paso a paso.",
+            "control_bar_play": "Este botón permite iniciar o parar la simulación automática.",
+            "control_bar_speed": "Puedes ajustar la velocidad de la simulación automática con esta barra",
+            "view_bar": "Puedes cambiar entre una vista de un solo simulador y una vista de múltiples simuladores para realizar comparaciones.",
+            "storage": "Puedes guardar y cargar las configuraciones de tu simulador.",
+            "repeat_tutorial": "Puedes volver a ver este tutorial en cualquier momento pulsándome."
+        },
+        "filename": "Nombre del archivo",
+        "filename_text": "El nombre del archivo solo puede contener carácteres alfanuméricos."
+    },
+
+    "io": {
+        "requests": "Peticiones",
+        "add_request": "Añadir petición",
+        "no_requests_added": "No se ha introducido ninguna petición.",
+        "track": "Pista",
+        "direction": "Sentido",
+        "upwards": "Ascendente",
+        "downwards": "Descentende",
+        "initial_position": "Posición inicial",
+        "final_position": "Posición final",
+        "track_number": "Número de pistas",
+        "request_number": "# petición",
+        "displacement": "Desplazamiento",
+        "results": "Resultados",
+        "total": "Total",
+        "average": "Media",
+        "time": "tiempo",
+        "no_requests_completed": "No se ha completado ninguna petición",
+        "algorithms": {
+            "fcfs": "First In First Out (FIFO)",
+            "sstf": "Shortest Seek Time First (SSTF)",
+            "scan": "SCAN",
+            "cscan": "CSCAN",
+            "lifo": "Last In First Out (LIFO)"
+        },
+
+        "tutorial": {
+            "algorithm_select": "Aquí puedes seleccionar el algoritmo de la simulación. Si estás en la vista comparativa podrás seleccionar más de uno.",
+            "simulator_settings": "Puedes configurar el número de pistas y posición inicial del cabezal. También se puede indicar el sentido inicial del movimiento, si los algoritmos seleccionados lo permiten.",
+            "request_list": "Aquí puedes indicar las peticiones que quieres simular y observar las peticiones que se procesarán",
+            "request_list_add": "Para añadir una petición debes introducir un valor numérico entre {{min}} y {{max}} y pulsar el botón \"Añadir petición\".",
+            "request_list_remove": "Aquí aparecen todas las peticiones así como las has introducido. Puedes borrarlas haciendo click en el icono con una \"X\"",
+            "demo_requests": "El simulador ya incluye algunos ejemplos de peticiones para observar el funcionamiento de éste. Si pulsas sobre algún ejemplo se añadirán automáticamente las peticiones."
+        }
+    },
+
+    "menu": {
+        "IOSimulator": "Simulador E/S"
+    },
+
+    "help": {
+        "modals": {
+            "io": {
+                "fcfs": {
+                    "text_1": "El algoritmo First In First Out procesa los accesos a disco secuencialmente. La primera petición que se recibe es la primera petición procesada.",
+                    "text_2": "Al realizarse muchas peticiones, este algoritmo se comporta como una planificación aleatoria, aunque es el sistema más justo de todos."
+                },
+
+                "sstf": {
+                    "text_1": "El algoritmo Shortest Seek Time First conocido como “primero con el tiempo de búsqueda menor” atiende primero aquellas peticiones que se encuentran más cerca del cabezal.",
+                    "text_2": "Este sistema favorece las peticiones que se encuentran cerca del cabezal, desfavoreciendo las peticiones periféricas."
+                },
+
+                "scan": {
+                    "text_1": "El algoritmo SCAN intenta simular el comportamiento de un ascensor. El cabezal se mueve desde la primera pista, aunque no haya peticiones, hasta la última procesando las peticiones que se encuentra. Cuando llega a un extremo, realiza el mismo recorrido en sentido contrario.",
+                    "text_2": "El objetivo del algoritmo es reducir los cambios de sentido, pero favorece a las peticiones recientes."
+                },
+
+                "cscan": {
+                    "text_1": "El algoritmo C-SCAN intenta simular el comportamiento de un ascensor como el algoritmo SCAN. El cabezal se mueve en un único sentido (ascendente o descendente) y cuando llega a un extremo se sitúa rápidamente al contrario sin atender peticiones.",
+                    "text_2": "El principal objetivo es eliminar la discriminación entre las pistas interiores y las periféricas."
+                },
+
+                "look": {
+                    "text_1": "El algoritmo LOOK simula el comportamiento de un ascensor. Este algoritmo procesa todas las peticiones que se encuentra en un sentido hasta llegar a la última pista. Luego realiza el mismo recorrido pero en sentido contrario hasta llegar a la última petición, sin llegar al extremo del disco.",
+                    "text_2": "La principal diferencia entre LOOK y SCAN es que el primero no llega hasta los límites del disco, en cambio, SCAN sí."
+                },
+
+                "clook": {
+                    "text_1": "El algoritmo C-LOOK tiene un comportamiento similar al LOOK. Este algoritmo siempre atiende todas las peticiones que se encuentra en un sentido, y siempre es el mismo. A diferencia del C-SCAN, éste no llega a los extremos del disco, solo hasta la pista con peticiones."
+                }
+            }
+        },
+        "io": {
+            "title": "Planificación de E/S",
+            "text_1": "El simulador de Entrada y Salida permite observar el funcionamiento de los algoritmos utilizados para atender a las peticiones de acceso a disco.",
+            "hdd_parts": "Elementos de un disco duro",
+            "text_2": "El disco duro es un dispositivo de almacenamiento que hace uso de las propiedades magnéticas de sus discos para almacenar información. El dispositivo se puede dividir en distintas partes: ",
+            "text_2_1": "Los platos son cada uno de los discos donde se guarda la información bit a bit.",
+            "text_2_2": "Estos platos están hechos de un material con unas propiedades magnéticas que permiten cambiar la orientación del campo magnético.",
+            "text_2_3": "Las pistas son cada una de las divisiones radiales en el plato.",
+            "text_2_4": "Las pistas se dividen en sectores, que son la unidad mínima de información. Los sectores situados más a la periferia tendrán una densidad de información inferior a los situados en pistas más interiores.",
+            "text_2_5": "El cilindro es el conjunto de una pista en los distintos platos.",
+            "text_2_6": "El cabezal es una pieza móvil que realiza la lectura o escritura de la información en los sectores. Esta pieza puede cambiar la orientación del campo magnético de los platos, en función de la información que se quiere escribir.",
+         
+            "working": {
+                "text_1": "El simulador permite seleccionar entre los distintos algoritmos, la posición inicial del cabezal y la cantidad de pistas del disco.",
+                "text_2": "Los algoritmos que requieren una configuración adicional como SCAN y LOOK (y sus variantes) permiten indicar el sentido inicial del recorrido.",
+                "text_3": "Para añadir una petición al simulador, se debe introducir un valor numérico en el rango [0, número de pistas) y pulsar el botón \"Añadir petición\".",
+                "text_4": "También se pueden eliminar las peticiones añadidas haciendo click en el icono de eliminar petición situado a la derecha del número de pista.",
+                "text_5": "Los resultados del simulador son:",
+                "text_5_1": "Un gráfico que muestra las distintas peticiones y cómo han sido atendidas. El eje horizontal representa el tiempo y el vertical el número de pista.",
+                "text_5_2": "Una tabla con cada uno de los desplazamientos, indicando la posición inicial y final del desplazamiento."
+            }
+        }
+    }
+}

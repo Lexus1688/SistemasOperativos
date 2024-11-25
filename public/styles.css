@@ -1,0 +1,60 @@
+
+#body{
+    position: relative;
+    background-color: #a2d2ff;
+}
+.logo__u{
+    top: 0;
+    left: 25px;
+   position: absolute;
+   width: 215px;
+   height: 105px;
+}
+.titulo{
+    top: 50px;
+    left: 100px;
+    margin: 50px;
+    text-align: center;
+}
+.integrantes{
+    top: 100px;
+    width: 80%;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.integrantes:hover{
+    box-shadow: 0px 0px 55px 10px #fff2;
+}
+.i1{
+    border-radius: 15px;
+    margin: 5px;
+    width: 300px;
+    height: 300px;
+}
+.i2{
+    border-radius: 15px;
+    margin: 5px;
+    width: 350px;
+    height: 300px;
+}
+.i3{
+    border-radius: 15px;
+    margin: 5px;
+    width: 350px;
+    height: 300px;
+}
+.i4{
+    border-radius: 15px;
+    margin: 5px;
+    width: 350px;
+    height: 300px;
+}
+.i5{
+    border-radius: 15px;
+    margin: 5px;
+    width: 300px;
+    height: 300px;
+}
